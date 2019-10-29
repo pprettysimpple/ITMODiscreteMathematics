@@ -38,7 +38,7 @@ signed main() {
             scanf("%d", in[i] + j);
             in[i][j]--;
         }
-        for (int j = 0; j < (1 << sz[i]); j++) {
+        for (int j = (1 << sz[i]) - 1; j >= 0; j--) {
             scanf("%d", in_vals[i] + j);
         }
     }
@@ -58,12 +58,12 @@ signed main() {
             }
             vals[u] = in_vals[u][res];
         }
-        ans[mask] = !vals[n - 1];
+        ans[mask] = vals[n - 1];
     }
 
     printf("%d\n", deph[n - 1]);
 
-    for (int i = (1 << k) - 1; i >= 0; i--) {
+    for (int i = 0; i < (1 << k); i++) {
         printf("%d", ans[i]);
     }
 
