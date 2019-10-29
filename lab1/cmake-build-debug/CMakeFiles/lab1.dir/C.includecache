@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kirill/Work/DM/lab1/C.c
+stdio.h
+-
+stdlib.h
+-
+memory.h
+-
+stdbool.h
+-
+stdatomic.h
+-
+
